@@ -1,5 +1,19 @@
 <div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div><div>HELLO</div>
-<div data-controller="hello">
-  <input data-hello-target="name" type="text">
-  <button data-action="click->hello#greet">Greet</button>
+<div data-controller="clipboard" data-clipboard-supported-class="clipboard--supported">
+  PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
+  <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
 </div>
+
+<div data-controller="slideshow" data-index="1">
+  <button data-action="slideshow#previous"> ← </button>
+  <button data-action="slideshow#next"> → </button>
+
+  <div data-slideshow-target="slide">🐵</div>
+  <div data-slideshow-target="slide">🙈</div>
+  <div data-slideshow-target="slide">🙉</div>
+  <div data-slideshow-target="slide">🙊</div>
+</div>
+
+<div data-controller="content-loader"
+     data-content-loader-url-value="/messages.html"
+     data-content-loader-refresh-interval-value="5000"></div>
